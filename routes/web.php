@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test/service', 'TestProviderController@index');
+
+Route::get('/test/event', 'TestEventController@index');
