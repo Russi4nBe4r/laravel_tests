@@ -19,6 +19,8 @@ Route::get('/test/service', 'TestProviderController@index');
 
 Route::get('/test/event', 'TestEventController@index');
 
+Route::get('test/lib', 'TestCutomLibController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
