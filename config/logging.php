@@ -88,6 +88,12 @@ return [
             'driver' => 'errorlog',
             'level' => 'debug',
         ],
+
+        'redis' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/redis.log'),
+            'level' => 'debug',
+        ]
     ],
 
 ];

@@ -19,7 +19,9 @@ Route::get('/test/service', 'TestProviderController@index');
 
 Route::get('/test/event', 'TestEventController@index');
 
-Route::get('test/lib', 'TestCutomLibController@index');
+Route::get('/test/lib', 'TestCutomLibController@index');
+
+Route::get('/test/redis/send', 'TestRedisController@send');
 
 Auth::routes();
 
