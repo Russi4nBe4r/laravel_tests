@@ -29,6 +29,8 @@ Route::get('/test/redis/recive/', 'TestRedisController@recive');
 
 Route::get('/test/user/{id}', 'TestUserController@index');
 
+Route::get('/test/mail', 'TestMailController@send');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
