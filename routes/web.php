@@ -23,6 +23,12 @@ Route::get('/test/lib', 'TestCutomLibController@index');
 
 Route::get('/test/redis/send', 'TestRedisController@send');
 
+Route::get('/test/redis/response', 'TestRedisController@response');
+
+Route::get('/test/redis/recive/', 'TestRedisController@recive');
+
+Route::get('/test/user/{id}', 'TestUserController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
