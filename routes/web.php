@@ -15,21 +15,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test/service', 'TestProviderController@index');
+Route::get('/test/service', 'TestProviderController@index')->middleware('auth');
 
-Route::get('/test/event', 'TestEventController@index');
+Route::get('/test/event', 'TestEventController@index')->middleware('auth');
 
-Route::get('/test/lib', 'TestCutomLibController@index');
+Route::get('/test/lib', 'TestCutomLibController@index')->middleware('auth');
 
-Route::get('/test/redis/send', 'TestRedisController@send');
+Route::get('/test/redis/send', 'TestRedisController@send')->middleware('auth');
 
-Route::get('/test/redis/response', 'TestRedisController@response');
+Route::get('/test/redis/response', 'TestRedisController@response')->middleware('auth');
 
-Route::get('/test/redis/recive/', 'TestRedisController@recive');
+Route::get('/test/redis/recive/', 'TestRedisController@recive')->middleware('auth');
 
-Route::get('/test/user/{id}', 'TestUserController@index');
+Route::get('/test/user/{id}', 'TestUserController@index')->middleware('auth');
 
-Route::get('/test/mail', 'TestMailController@send');
+Route::get('/test/mail', 'TestMailController@send')->middleware('auth');
+
+Route::get('/test/role', 'TestRoleController@index')->middleware('auth');
 
 Auth::routes();
 
